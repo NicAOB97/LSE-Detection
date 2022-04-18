@@ -19,7 +19,7 @@ no_sequences = 13
 sequence_length = 10
 
 # sequences, labels = make_variables(DATA_PATH, no_sequences, labels_dict, actions)
-model = load_model('./model/video_model7_weights')
+model = load_model('./model/my_model_weights')
 
 sequences = []
 window = []
@@ -29,7 +29,7 @@ colors = [(245,117,16), (117,245,16), (16,117,245)]
 
 ## Code to visualize predictions
 # Use abcin9.mp4, 
-cap = cv2.VideoCapture('./data/raw_data/abcin9.mp4')
+cap = cv2.VideoCapture(0)
 with mp_hands.Hands(
     static_image_mode = False,
     max_num_hands = 2,
