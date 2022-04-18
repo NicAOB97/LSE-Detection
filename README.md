@@ -1,10 +1,12 @@
 # LSE-Detection
 Machine Learning Project: LSE (Spanish Sign Language) Detection
+
 <em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em>
 
 ![LSE: A](/LSE-Detection/LSE_sign_language_detector/src/notebooks/mod_colected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A")
 
 Increasing Accesibility in Video Communication
+
 <em>Incrementando la Accesibilidad de las Plataformas de Comunicación Virtual de Video</em>
 
 Creating a model which can detect sign language and translate it to written text will allow people with hearing impairments to communicate more easily with those who are hearing. Sadly, not everyone knows sign language and this creates a barrier which is important to try to break this barrier. 
