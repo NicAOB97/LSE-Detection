@@ -2,7 +2,8 @@
 <strong>Machine Learning Project: LSE (Spanish Sign Language) Detection</strong><br>
 <strong><em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em></strong>
 
-![LSE: A](LSE_sign_language_detector/src/notebooks/mod_collected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A") ![LSE: A](LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png?raw=true "LSE: A")
+![LSE: A](LSE_sign_language_detector/src/notebooks/mod_collected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A") 
+![LSE: I](LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png?raw=true "LSE: I")
 
 Increasing Accesibility in Video Communication<br>
 <em>Incrementando la Accesibilidad de las Plataformas de Comunicación Virtual de Video</em>
