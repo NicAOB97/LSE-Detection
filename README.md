@@ -3,9 +3,7 @@
 <strong><em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em></strong>
 
 ![LSE: A](LSE_sign_language_detector/src/notebooks/mod_collected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A") 
-![LSE: I](LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png?raw=true "LSE: I")
-
-<a href="url"><img src="LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png" align="left" height="48" width="48" ></a>
+<a href="url"><img src="LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png" align="left" height="200" width="200" ></a>
 
 
 Increasing Accesibility in Video Communication<br>
