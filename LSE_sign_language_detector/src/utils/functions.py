@@ -61,7 +61,7 @@ def extract_keypoints(results, width, height):
                 keypoint_array_flat = np.append(zero_array, keypoint_array_flat)
 
         return (keypoint_array_flat)
-    
+
 #------------------------------------------------------------------------------------------------------------
 
 # FUNCTION: FRAME_COLLECTION
@@ -156,6 +156,13 @@ def frame_colection(key_action, key_to_press, count, input=0):
 # FUNCTION: MAKE_VARIABLES
 
 def make_variables(DATA_PATH, no_sequences, labels_dict, actions, sequence_length=10):
+    
+    ''' extracts keypoint data saved in arrays in folders for use 
+    makes 2 variables which can later be used as X and y variables'''
+
+    # input --> data_path (str), no_sequences (int), labels_dict (dict), actions (list), sequence_length (int, default 10)
+                                            # output --> 2 arrays 
+
     sequences, labels = [], []
     for action in actions:
         for sequence in range(no_sequences):

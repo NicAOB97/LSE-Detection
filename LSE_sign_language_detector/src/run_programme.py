@@ -19,7 +19,7 @@ no_sequences = 13
 sequence_length = 10
 
 # sequences, labels = make_variables(DATA_PATH, no_sequences, labels_dict, actions)
-model = load_model('./model/my_model')
+model = load_model('./model/video_model7_weights')
 
 sequences = []
 window = []
@@ -78,34 +78,34 @@ with mp_hands.Hands(
             frameHeight = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
             # Prediction
-            for frame_num in range(sequence_length):
-                keypoints = extract_keypoints(results, frameWidth, frameHeight)
-                
-                sequences.append(keypoints)
-
+            keypoints = extract_keypoints(results, frameWidth, frameHeight)
+            sequences.append(keypoints)
             if len(sequences) > 10:
                 sequence = sequences[-10:]
-                try :
+                try:
                     res = model.predict(np.expand_dims(sequence, axis=0))[0]
                     print(actions[np.argmax(res)])
-                    # 
+                except:
+                    print('')
+
+                try:
                     if res[np.argmax(res)] > threshold: 
                         if len(sentence) > 0: 
                             if actions[np.argmax(res)] != sentence[-1]:
                                 sentence.append(actions[np.argmax(res)])
                         else:
                             sentence.append(actions[np.argmax(res)])
-
-                    if len(sentence) > 5: 
-                        sentence = sentence[-5:]
-                
-                    # Viz probabilities
-                    try:
-                        image = prob_viz(res, actions, image, colors)
-                    except:
-                        print('')
                 except:
-                    print('e')
+                    print('')
+
+                if len(sentence) > 5: 
+                    sentence = sentence[-5:]
+            
+                # Viz probabilities
+                try:
+                    image = prob_viz(res, actions, image, colors)
+                except:
+                    print('')
                 
             cv2.rectangle(image, (0,0), (640, 40), (245, 117, 16), -1)
             cv2.putText(image, ' '.join(sentence), (3,30), 

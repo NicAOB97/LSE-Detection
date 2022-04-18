@@ -5,28 +5,15 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.callbacks import TensorBoard
-from sklearn.model_selection import train_test_split
 
-# Path for exported data, numpy arrays
 DATA_PATH = os.path.join('./data/processed_data/MP_Data') 
-# Actions that we try to detect
-actions = ['hola', 'a', 'b', 'c', 'i', 'n']
-key = [1,2,3,4,5,6]
-key_action = dict(zip(key,actions))
-# Thirty videos worth of data
+actions = ['hola', 'a', 'b', 'c', 'i', 'n', 'gracias']
 no_sequences = 14
-# Videos are going to be 10 frames in length
-sequence_length = 10
-
-make_folders(actions, no_sequences, DATA_PATH)
-
-# key_to press = according to key asociated to action, count
-# frame_colection(key_action, 6, 13, 0 )
-
 labels_dict = {label:num for num, label in enumerate(actions)}
-sequences, labels = make_variables(DATA_PATH, no_sequences, labels_dict, actions)
 
-# create x and y variables 
+# create variables to use for training - saved as sequences and labels but these are essentially X and y
+sequences, labels = make_variables(DATA_PATH, no_sequences, labels_dict, actions)
+# save as x and y variables 
 X = np.array(sequences)
 y = to_categorical(labels).astype(int)
 
