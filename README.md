@@ -1,6 +1,6 @@
 # LSE-Detection
-Machine Learning Project: LSE (Spanish Sign Language) Detection<br>
-<em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em>
+<strong>Machine Learning Project: LSE (Spanish Sign Language) Detection</strong><br>
+<strong><em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em></strong>
 
 ![LSE: A](/LSE_sign_language_detector/src/notebooks/mod_colected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A")
 
