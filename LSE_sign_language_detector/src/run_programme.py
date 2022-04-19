@@ -19,12 +19,12 @@ no_sequences = 13
 sequence_length = 10
 
 # sequences, labels = make_variables(DATA_PATH, no_sequences, labels_dict, actions)
-model = load_model('./model/my_model_weights')
+model = load_model('./model/video_model_weights_11')
 
 sequences = []
 window = []
 sentence = []
-threshold = 0.8
+threshold = 0.1
 colors = [(245,117,16), (117,245,16), (16,117,245)]
 
 ## Code to visualize predictions

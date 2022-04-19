@@ -8,7 +8,7 @@ from tensorflow.keras.callbacks import TensorBoard
 
 DATA_PATH = os.path.join('./data/processed_data/MP_Data') 
 actions = ['hola', 'a', 'b', 'c', 'i', 'n']
-no_sequences = 14
+no_sequences = 16
 labels_dict = {label:num for num, label in enumerate(actions)}
 
 # create variables to use for training - saved as sequences and labels but these are essentially X and y
@@ -38,4 +38,4 @@ model.compile(optimizer='Adam', loss='categorical_crossentropy', metrics=['categ
 
 model.fit(X, y, steps_per_epoch = 10, epochs=200, callbacks=[tb_callback])
 
-model.save('my_model')
+model.save('my_model_manos16')
