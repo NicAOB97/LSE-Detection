@@ -2,8 +2,8 @@
 <strong>Machine Learning Project: LSE (Spanish Sign Language) Detection</strong><br>
 <strong><em>Proyecto de Machine Learning: LSE (Lengua de Signos Española)</em></strong>
 
-Given a couple of weeks to complete our assignment and create a Machine Learning model at The Bridge School Madrid... this is what I did. 
-<em>Para completar mi trabajo de Machine Learning </em>
+Given a couple of weeks to complete our assignment and create a Machine Learning model at The Bridge School... this is what I did. <br>
+<em>Para completar el modulo de Machine Learning de The Bridge School, decidi hacer lo siguiente... </em>
 
 ![LSE: A](LSE_sign_language_detector/src/notebooks/mod_collected_images/train/A/izqCaptura_pantalla_2022-03-3.png?raw=true "LSE: A") 
 <a href="url"><img src="LSE_sign_language_detector/src/notebooks/collected_images/Cap_65577874.png" align="left" height="200" width="200" ></a>
