@@ -21,3 +21,11 @@ Applying Mediapipe Solutions to images and videos to track hand movement, extrac
 
 <em>Aplicación de Mediapipe Solutions a imagenes y videos para realizar un seguimiento las manos, extrayendo puntos claves (coordenadas de posición). Creación de una red neuronal para clasificar palabras y letras en LSE. </em>
 
+<h2>Pre-requisites :black_nib: </h2>
+
+```
+pip install -r requirements.txt 
+```
+
+<h2>AUTHOR :black_nib: </h2>
+- Nic Orchard @NicAOB97
