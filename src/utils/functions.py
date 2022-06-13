@@ -133,20 +133,44 @@ def frame_colection(key_action, key_to_press, count, input=0):
                 # collect info for keypoint extraction
                 frameWidth = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
                 frameHeight = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-                # control keypoint extraction with keyboard press
-                sequence_length = 10
+
+                ## control keypoint extraction with keyboard press
+                # set variables
+                sequence_length = 20
                 DATA_PATH = os.path.join('./data/processed_data/MP_Data') 
+
                 if keyboard.is_pressed(str(key_to_press)):
                     print('keyboard pressed: {}'.format(key_to_press))
                     # extracts 20 frames 
                     for frame_num in range(sequence_length):
+                        results = hands.process(image)
                         keypoints = extract_keypoints(results, frameWidth, frameHeight)
                         action = key_action[key_to_press]
                         npy_path = os.path.join(DATA_PATH, action, str(count), str(frame_num))
                         print(os.path.join(DATA_PATH, action, str(count), str(frame_num)))
+                        cv2.imwrite(DATA_PATH+str(frame_num)+'.jpg', image)
                         np.save(npy_path, keypoints)
                         success, image = cap.read()
                         frame_num = frame_num +1
+                        # mediapipe detection: make prediction (process) then make image writeable
+                        # to draw hand annorations on the image
+                        image.flags.writeable = False
+                        image = image
+                        cv2.imshow('frame', cv2.flip(image, 1))
+                        results = hands.process(image)
+                        image.flags.writeable = True
+
+                        # draw the keypoint landmarks
+                        if results.multi_hand_landmarks:
+                            for hand_landmarks in results.multi_hand_landmarks:
+                                mp_drawing.draw_landmarks(
+                                    image,
+                                    hand_landmarks,
+                                    mp_hands.HAND_CONNECTIONS,
+                                    mp_drawing_styles.get_default_hand_landmarks_style(),
+                                    mp_drawing_styles.get_default_hand_connections_style())
+                        # Flip the image horizontally for a selfie-view display.
+                        cv2.imshow('MediaPipe Hands', cv2.flip(image, 1))
 
         cap.release()
         cv2.destroyAllWindows()

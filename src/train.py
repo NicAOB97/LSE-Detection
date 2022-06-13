@@ -7,7 +7,7 @@ from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.callbacks import TensorBoard
 
 DATA_PATH = os.path.join('./data/processed_data/MP_Data') 
-actions = ['hola', 'a', 'b', 'c', 'i', 'n']
+actions = ['hola', 'a', 'b', 'c', 'i', 'n', 'bien']
 no_sequences = 16
 labels_dict = {label:num for num, label in enumerate(actions)}
 
